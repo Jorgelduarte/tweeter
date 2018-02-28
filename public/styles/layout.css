@@ -15,7 +15,7 @@ main.container {
   background-color: white;
   padding-top: 140px;
   margin: auto;
-  height: -webkit-fill-available;
+  height: fit-content;
 
 }
 
