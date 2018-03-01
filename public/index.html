@@ -30,6 +30,10 @@
 
     <!-- Moment -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.4/moment.js"></script>
+    
+   <!-- Font Awesome -->
+   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  
   </head>
 
   <body>
@@ -38,6 +42,8 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
+      <button type="button" id = "compose"><i class="fas fa-edit"></i> Compose</button>
+      
     </nav>
 
     <!-- Page-specific (main) content here -->
@@ -45,11 +51,13 @@
     <main class="container">
         <section class="new-tweet">
             <h2>Compose Tweet</h2>
-            <form>
-              <textarea name="text" placeholder="What are you humming about?"></textarea>
-              <input type="submit" value="Tweet">
-              <span class="counter">140</span>
-            </form>
+            <div id = "loadMorePosts">
+              <form>
+                <textarea name="text" placeholder="What are you humming about?"></textarea>
+                <input type="submit" value="Tweet">
+                <span class="counter">140</span>
+              </form>
+            </div>
         </section>
         <section id="tweetView">
         </section>

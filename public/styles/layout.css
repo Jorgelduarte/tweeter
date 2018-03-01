@@ -16,6 +16,8 @@ main.container {
   padding-top: 140px;
   margin: auto;
   height: fit-content;
+  position: relative;
+  z-index: 1;
 
 }
 
