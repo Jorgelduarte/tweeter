@@ -12,7 +12,7 @@ $(document).on("ready", function(){
   })
 
 
-
+  // render tweets from database
   function renderTweets(tweets) {
     $("#tweetView").empty();
     tweets.forEach(function(tweet){
@@ -21,7 +21,7 @@ $(document).on("ready", function(){
     });      
   }
 
-
+  // create all element in HTML
   function createTweetElement(tweetData){
   
     // variable to create date
