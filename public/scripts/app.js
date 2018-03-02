@@ -16,7 +16,7 @@ $(document).on("ready", function(){
   function renderTweets(tweets) {
     $("#tweetView").empty();
     tweets.forEach(function(tweet){
-        var newTweet = createTweetElement(tweet);
+        const newTweet = createTweetElement(tweet);
         $('#tweetView').prepend(newTweet); 
     });      
   }
@@ -25,20 +25,20 @@ $(document).on("ready", function(){
   function createTweetElement(tweetData){
   
     // variable to create date
-    var dateFromNow = moment(tweetData.created_at).fromNow();
+    const dateFromNow = moment(tweetData.created_at).fromNow();
 
     //Creation of variable with data
-    var $article = $("<article>").addClass('tweet');
-    var $header = $("<header>");
-    var $img = $("<img>").addClass('photo').attr("src", tweetData.user.avatars.small);
-    var $username = $("<div>").addClass('userName').text(tweetData.user.name);
-    var $user = $("<div>").addClass('user').text(tweetData.user.handle);
-    var $text = $("<div>").addClass('tweetText').text(tweetData.content.text);
-    var $footer = $("<footer>");
-    var $date = $("<div>").addClass('timeAgo').text(dateFromNow);
-    var $imgIcon1 = $("<img>").addClass('icons').attr("src", 'images/flag.png');
-    var $imgIcon2 = $("<img>").addClass('icons').attr("src", 'images/retweet.png');
-    var $imgIcon3 = $("<img>").addClass('icons').attr("src", 'images/heart.png');
+    const $article = $("<article>").addClass('tweet');
+    const $header = $("<header>");
+    const $img = $("<img>").addClass('photo').attr("src", tweetData.user.avatars.small);
+    const $username = $("<div>").addClass('userName').text(tweetData.user.name);
+    const $user = $("<div>").addClass('user').text(tweetData.user.handle);
+    const $text = $("<div>").addClass('tweetText').text(tweetData.content.text);
+    const $footer = $("<footer>");
+    const $date = $("<div>").addClass('timeAgo').text(dateFromNow);
+    const $imgIcon1 = $("<img>").addClass('icons').attr("src", 'images/flag.png');
+    const $imgIcon2 = $("<img>").addClass('icons').attr("src", 'images/retweet.png');
+    const $imgIcon3 = $("<img>").addClass('icons').attr("src", 'images/heart.png');
 
     // appending
     $article.append($header);
